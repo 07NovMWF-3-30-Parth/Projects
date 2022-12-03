@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1 align="center">Registration form with validation</h1>
+    <form action="" method="" enctype="">
+        <fieldset>
+            <legend>User Registration Form</legend>
+            <label for="salutation">*Salutation :</label>
+            <select name="salutation" id="salutation" required>
+                <option value="--none--">--none--</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Miss">Miss</option>
+            </select>
+            <br><br>
+            <label for="fname">*First name :</label>
+            <input type="text" name="fname" id="First name" title="first name" placeholder="First name" required>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="lname">*Last name :</label>
+            <input type="text" name="lname" id="Last name" title="last name" placeholder="Last name" required>
+            <br><br>
+            <label for="gender">Gender :</label>
+            <input type="radio" name="gender" id="male" title="male">Male
+            <input type="radio" name="gender" id="female" title="female">Female
+            <br><br>
+            <label for="email">*Email :</label>
+            <input type="email" name="email" title="email" id="email" placeholder="Enter email" required>
+            <br><br>
+            <label for="dob">Date of Birth :</label>
+            <input type="date" name="dob" id="date of birth" title="birthdate">
+            <br><br>
+            <label for="age">*Age :</label>
+            <input type="number" name="age" id="age" title="age" placeholder="Age" required>
+            <br><br>
+            <label for="mobile">*Mobile No. :</label>
+            <input type="tel" name="mobile" id="mobile no." title="mobile no." placeholder="Enter mobile no." required>
+            <br><br>
+            <label for="course">Course :</label>
+            <input type="checkbox" name="course" id="Web Design" title="Web Design">Web Design&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="course" id="Web Development" title="Web Development">Web Development&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="course" id="Backend Development" title="Backend Development">Backend Development&nbsp;&nbsp;&nbsp;
+            <br><br>
+            <label for="github">*Enter Github URL :</label>
+            <input type="url" name="github" id="github url" title="github url" placeholder="Enter Github URL" required>
+            <br><br>
+            <label for="document">*Upload your Qualification Documents :</label>
+            <input type="file" name="document" id="Qualification Documents" title="Qualification Documents" required>
+            <br><br>
+            <label for="address">Address :</label><br>
+            <textarea name="address" id="address" cols="30" rows="5" title="address" placeholder="enter address here"></textarea>
+            <br><br><p>* fields are mandatory.</p><br>
+            <input type="submit">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset">
+        </fieldset>
+    </form>
+</body>
+</html>
