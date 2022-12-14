@@ -5,21 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <table border="5px" width="100%">
-        <tr>
-            <td width="20%" height="20px"><a href="https://www.youtube.com/"><img src="../3. Youtube/images/YouTube-logo.jpg" width="35%" alt=""></a></td>
-            <td colspan="4"><input type="search" title="search"></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-    </table>
-    
+    <div class="header">
+        <div class="nav">
+            <div class="menu">
+                <a id="metaMenu" href=""><p>&#9776;</p></a>
+            </div>
+            <div class="logo">
+                <a href=""><img src="images/YouTube-logo.jpg" width="40%" alt=""></a>
+            </div>
+            <div class="search">
+                <label for="">
+                <input type="search" title="search video" name="search video" id="video name" placeholder="Search">&#128269;</label>  &nbsp; <a>&#127908;</a>
+            </div>
+            <div class="signin">
+                <a href="">&#9812; &nbsp;Sign in </a>
+            </div>
+        </div>
+    </div>
+        
+    <div class="maincontainer">
+        <div class="lside">
+            <ul>
+                <li><a href="index.html">Home</a></li><hr>
+                <li>
+                    <details>
+                        <summary> Assessment</summary>
+                        <ol>
+                            <li><a href="related html/wd_Assessment/Indiano webpage/webpage.html" target="pd" width="100%">Indiano Restaurent</a></li>
+                        </ol>
+                    </details>
+                </li><hr>
+                <li>
+                    <details>
+                        <summary> Assignment</summary>
+                        <ol>
+                            <li><a href="related html/wd_Assignment/01. FD HTML assignment.html" target="pd">FD HTML Assignment</a></li>
+                        </ol>
+                    </details>
+                </li><hr>
+                <li>
+                    <details>
+                        <summary>Projects</summary>
+                        <ul type="none">
+                            <li>
+                                <a href="related html/wd_Project/1. Domino's (Imagemapping)/index.html" target="pd">Domino's<br>(Image-mapping)
+                                </a>
+                            </li><br>
+                            <li>
+                                <a href="related html/wd_Project/2. Cookies World(Zomato)(Table)/index.html" target="pd">Cookie world(zomato)<br>(table)
+                                </a>
+                            </li><br>
+                            <li>
+                                <a href="related html/wd_Project/4.UberEats/index.html" target="pd">UberEats<br>(div)
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li><hr>
+                <li>
+                    <a href="main html/Web Defination(html).html" target="pd">Web Definition</a>
+                </li><hr>
+                <li>
+                    <a href="main html/about me.html" target="pd">About me</a>
+                </li>
+                <hr>
+                <li>
+                     <button onclick="myFunction()">&#9812; &nbsp;Sign in </button><br>
+                     <p>you can push the button.<br>but dont push it.</p>
+                </li>
+            </ul>
+            <script>
+                function myFunction() {
+                alert("told you dont push the button.");
+              }
+            </script>
+        </div>
+        <div class="keywords">
+            <a href="youtube/All.html" target="pd">All</a>
+            &nbsp;
+            <a href="youtube/music.html" target="pd">Music</a> 
+            &nbsp; 
+            <a href="youtube/news.html" target="pd">News</a>
+            &nbsp; 
+            <a href="youtube/sports.html" target="pd">Sports</a> 
+            &nbsp; 
+            <a href="youtube/gadgets.html" target="pd">Gadgets</a>
+            &nbsp;
+            <a href="youtube/coke studio.html" target="pd">Coke Studio</a> 
+            &nbsp; 
+            <a href="youtube/bhajan.html" target="pd">Bhajan</a> 
+            &nbsp; 
+            <a href="youtube/my game album.html" target="pd">My Game Album</a>
+            
+            <br>
+            <br>
+            <br>
+
+            <div class="frame">
+                <iframe src="youtube/All.html" title="yt" frameborder="0" name="pd"></iframe>
+            </div>
+        </div>
+    </div>    
 </body>
 </html>

@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+
+}
+.row1, .row2, .row3, .row4 {
+    width: 100%;
+    display: flex;
+}
+.cell {
+    width: 25%;
+    height: 250px;
+}
+img:hover {
+    transform: scale(1.2);
+    border-radius: 20px;
+}
+img {
+    width: 100%;
+}

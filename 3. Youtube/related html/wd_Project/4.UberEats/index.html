@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Eats Us | Food Delivery and Takeout | Order Online from...ubereats.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .header {
+            /* border: none; */
+            background-image: url(Images/background.png);
+            /* background-clip: border-box; */
+            background-size: cover;
+            height: 650px;
+        }
+        .nav { 
+            padding-top: 20px;
+            padding-left: 35px;
+            font-size: 25px;
+        }
+        .nav>a, a:visited {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        h1 { 
+            padding-top: 160px;
+            padding-left: 50px;
+            font-size: 50px;
+            font-family: sans-serif;
+        }
+        label {
+            border: 2px solid white;
+            background-color: white;
+            font-size: 15px;
+            padding: 17px;
+        }
+        .search-input { 
+            padding: 10px;
+            padding-right: 300px;
+            outline: none;
+            border: none;
+        }
+        /* input:active {
+            border: white;
+        } */
+        i {
+            font-size: 20px;
+        }
+        select {
+            padding: 18px;
+            border: 4px white;
+            padding-right: 20px;
+        }
+        button {
+            border: none;
+            font-size: 15px;
+            padding: 18px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: rgb(73, 73, 73);
+        }
+        option {
+            padding: 200px;
+        }
+        .trio-section {
+            /* border: 2px solid black; */
+            height: 400px;
+            padding-top: 90px;
+            padding-left: 40px;
+            display: flex;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+        }
+        .map-section {
+            padding: 40px;
+        }
+        li {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="" style="font-size: 23px;"><b>&#9776;</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <a href=""> <span style="font-size: 40px;">u</span>ber <b>Eats</b></a>
+            <a href="" style="border: 1px solid white; padding: 13px; border-radius: 30px; background-color: white; color: black;margin-left: 870px; font-size: 17px;"><i class="fa-solid fa-user"></i> Log in</a>&nbsp;
+            <a href="" style="border: 1px solid black; padding: 13px; border-radius: 30px; background-color: black; color: white; font-size: 17px;">Sign up</a>
+        </div>
+            <h1>Order food to your door</h1>
+            <br><br><br>
+            <label for="location" style="margin-left: 50px;"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="search" id="location" placeholder="Enter delivery address" class="search-input">
+            </label> &nbsp; 
+            <select name="delivery time" title="delivery time" id="delivery time">
+                <option value="Deliver now">&#128338; &nbsp; Deliver now</option>
+                <option value="Schedule for later">&#128197; &nbsp; Schedule for later</option>
+            </select>
+            &nbsp;
+            <button><b>Find Food</b></button>
+            <br><br>
+            <p style="font-size: 15px; padding-left: 50px;"><a href=""><u>Sign in</u></a> for your recent addresses</p></b>
+    </div>
+    <div class="trio-section">
+        <div class="first">
+            <a href="">
+                <img src="Images/feed_employees.png" width="90%" alt="">
+                <br>
+                <h2>Feed your employees</h2>
+                <br>
+                <p><u>Create a business account</u></p>
+                </a>
+        </div>
+        <div class="second">
+            <a href="">
+                <img src="Images/your_restaurent_delivered.png" width="90%" alt="">
+                <br>
+                <h2>Your restaurent, delivered</h2>
+                <br>
+                <p><u>Add your restaurent</u></p>
+                </a>
+        </div>
+        <div class="third">
+            <a href="">
+                <img src="Images/deliver_with_uber_eats.png" width="90%" alt="">
+                <br>
+                <h2>Deliver with Uber Eats</h2>
+                <br>
+                <p><u>Sign up to deliver</u></p>
+                </a>
+        </div>
+    </div>
+    <div class="map-section">
+        <div class="maphead" style="display: flex;">
+            <div class="mptitle"><h2 style="font-size: 35px;">Cities near me</h2></div>
+            <div class="mpcities" style="padding-left: 850px;"><p><u><b>View all 500+ cities</b></u></p></div>
+        </div>
+        <br>
+        <img  src="Images/ubereats-map.png" width="100%" alt="">
+        <br><br>
+        <ul type="none">
+            <div class="mpct" style="display: flex; width: 100%;">
+            <div class="mpct1" style="width: 25%;">
+                <li>Akron</li>
+                <li>Albuquerque</li>
+                <li>Bridgeport</li>
+                <li>Concord</li>
+                <li>Dayton</li>
+                <li>El Paso</li>
+            </div>
+            <div class="mpct2" style="width: 25%;">
+                <li>Hartford</li>
+                <li>Houston</li>
+                <li>Indianapolis</li>
+                <li>McAllen</li>
+                <li>Mesa</li>
+                <li>Milwaukee</li>
+            </div>
+            <div class="mpct3" style="width: 25%;">
+                <li>Nashville</li>
+                <li>New Orleans</li>
+                <li>Oklahoma City</li>
+                <li>Omaha</li>
+                <li>Orlando</li>
+                <li>Palm Bay</li>
+            </div>
+            <div class="mpct4" style="width: 25%;">
+                <li>Providence</li>
+                <li>Queens</li>
+                <li>San Antonio</li>
+                <li>Stony Brook</li>
+                <li>Tucson</li>
+                <li>West Hollywood</li>
+            </div>
+            </div>
+        </ul>
+        <br><br><br>
+        <div class="map-countries" style="display: flex;">
+            <div class="country-title"><h2 style="font-size: 35px;">Countries with Uber Eats</h2></div>
+            <div class="country-list" style="padding-left: 700px;"><u>View all countries</u></div>
+       </div>
+       <br>
+       <ul type="none">
+            <div class="mpcountry" style="display: flex;">
+                <div class="mpcountry1" style="width: 25%;">
+                    <li>Australia</li>
+                    <li>Belgium</li>
+                    <li>Bolivia</li>
+                    <li>Canada</li>
+                    <li>Chile</li>
+                    <li>Costa Rica</li>
+                    <li>Dominican Republic</li>
+                    <li>Ecuador</li>
+                </div>
+                <div class="mpcountry2" style="width: 25%;">
+                    <li>El Salvador</li>
+                    <li>France</li>
+                    <li>Germany</li>
+                    <li>Guatemala</li>
+                    <li>Ireland</li>
+                    <li>Italy</li>
+                    <li>Japan</li>
+                    <li>Kenya</li>
+                </div>
+                <div class="mpcountry3" style="width: 25%;">
+                    <li>Mexico</li>
+                    <li>Netherlands</li>
+                    <li>New Zealand</li>
+                    <li>Panama</li>
+                    <li>Poland</li>
+                    <li>Portugal</li>
+                    <li>South Africa</li>
+                    <li>Spain</li>
+                </div>
+                <div class="mpcountry4" style="width: 25%;">
+                    <li>Sri Lanka</li>
+                    <li>Sweden</li>
+                    <li>Switzerland</li>
+                    <li>Taiwan (ROC)</li>
+                    <li>United Kingdom</li>
+                    <li>United States</li>
+                </div>
+            </div>
+       </ul>
+    </div>
+    <br>
+    <hr style="border: 1px solid rgb(209, 206, 206);">
+    <br><br>
+    <div class="footer">
+        <div class="main-foot" style="display: flex; width: 100%;">
+            <div class="mfootleft" style="width: 50%;">
+                <a href="" style="font-size: 30px; padding: 30px;"> <span style="font-size: 45px;">u</span>ber <b>Eats</b></a>
+                <br>
+                <a href=""><img style="padding-top: 150px; padding-left: 30px;" src="Images/appstore.svg" alt=""></a> &nbsp; <a href=""><img src="Images/playstore.png" alt="" width="20%"></a>     
+            </div>
+            <ul type="none">
+                <div class="mfootright" style="display: flex; width: 100%;">
+                <div class="mfootr1" style="width: 60%;">
+                    <li>Get Help</li>
+                    <li>Buy gift cards</li>
+                    <li>Add your restaurant</li>
+                    <li>Sign up to deliver</li>
+                    <li>Create a business account</li>
+                    <li>Promotions</li>
+                </div>
+                <div class="mfootr2" style="width: 40%; padding-left: 80px;">
+                    <li>Restaurants near me</li>
+                    <li>View all cities</li>
+                    <li>View all countries</li>
+                    <li>Pickup near me</li>
+                    <li>About Uber Eats</li>
+                    <li><i class="fa-solid fa-language"></i> English</li>
+                </div>
+                </div>
+            </ul>
+        </div>
+        <div class="otherfoot" style="padding: 30px;">
+            <a href=""><img src="Images/facebook logo.png" alt="" width="20px"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href=""><img src="Images/twitter logo.png" alt="" width="20px"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href=""><img src="Images/instagram logo.png" alt="" width="20px"></a>
+            <p style="font-size: 14px; padding-left: 400px; text-align: right;">Privacy Policy &nbsp; &nbsp; &nbsp; &nbsp; Terms &nbsp; &nbsp; &nbsp; &nbsp; Pricing &nbsp; &nbsp; &nbsp; &nbsp; Do not sell or share my personal information <br><br>
+                This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. &nbsp; &nbsp; © 2022 Uber Technologies Inc.</p>
+        </div>    
+    </div>
+</body>
+</html>
