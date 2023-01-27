@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+    font-family: sans-serif; 
+    color: gray;
+}
+body{
+    background: url(images/netflix_login_background.jpg)center center/cover;
+}
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.container{
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-25{
+    /* width: 25%; */
+    width: 100%;
+}
+
+
+img {
+    width: 12%;
+    margin: 20px 0 0 40px;
+}
+.info {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 20px 450px 0 450px;
+}
+.info-wrapper{
+    padding: 60px 65px 155px 65px;
+}
+h1 {
+    color: white;
+    padding-bottom: 20px;
+}
+.ipbox {
+    margin: 7px 0px;
+    border-radius: 5px;
+    padding: 15px 0;
+    width: 315px;
+    background-color: rgb(63, 60, 60);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+button {
+    margin-top: 35px;
+    padding: 15px 130px 15px 130px;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.801);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+.rem_me {
+    margin: 10px 0px;
+    width: 3%;
+}
+label {
+    font-size: 13px;
+}
+.help {
+    padding-left: 145px;
+    font-size: 13px;
+    text-decoration: none;
+}
+.big{
+    padding: 80px 0 20px 0;
+}
+.big>p>a {
+    padding: 0;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+.small {
+    font-size: 13px;
+}
+.small>p>a {
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(59, 59, 250);
+}
+#footer {
+    padding-top: 10px;
+    margin-top: 55px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#footer>p {
+    margin: 30px 170px;
+}
+.list {
+    margin: 0 170px;
+}
+#footer a{
+    display: inline-block;
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+select {
+    margin: 50px 170px;
+    padding: 12px 10px;
+    color: gray;
+    border: 1px solid gray;
+    background-color: black;
+}
+/* files for our layout, grid system, and components. */
+
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container{
+        width: 520px;
+        margin: 0 auto;
+    }
+    .col-25{
+        width: 100%;
+    }
+    .info{
+        margin: 20px 42px 0 30px;
+    }
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container{
+        width: 700px;
+        margin: 0 auto;
+    }
+    .col-25{
+        width: 50%;
+    }
+    .info{
+        margin: 20px 132px 0 120px;
+    }
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px){
+    .container{
+        width: 920px;
+        margin: 0 auto;
+    }
+    .col-25{
+        width: 25%;
+    }
+    .info{
+        margin: 20px 242px 0 230px;
+    }
+}
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px){
+    .container{
+        width: 1100px;
+        margin: 0 auto;
+    }
+    .col-25{
+        width: 25%;
+    }
+    .info{
+        margin: 20px 327px 0 325px;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 90%;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        fieldset{
+            margin: 0 auto;
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter details for Subscription<br>(Form Validation JS)</h1>
+    <br><hr><br>
+    <fieldset>
+        <legend>About you</legend>
+        <label for="name">Name* :</label>
+        <input type="text" name="uname" id="uname" title="uname" placeholder="Enter your name here" onblur="valid_name()"><span id="name_error"></span>
+        <br><br>
+        <label for="name">Age* :</label>
+        <input type="number" name="age" id="age" placeholder="Enter your age here" onblur="valid_age()"><span id="age_error"></span>
+        <br><br>
+        <label for="name">Email id* :</label>
+        <input type="email" name="email" id="email" title="email" placeholder="Enter your email id here" onblur="valid_email()"><span id="email_error"></span>
+        <br><br>
+        <label for="name">Password* :</label>
+        <input type="password" name="password" id="password" title="password" placeholder="Enter your password here" onblur="valid_password()"><span id="pass_error"></span>
+        <br><br><br>
+        <input type="submit" name="submit" id="submit" onclick="submit(this)"><span id="required"></span>
+        <p>* - fields are mandatory</p>
+    </fieldset>
+    </div>
+</body>
+</html>
+
+
+<script>
+    
+    
+    function valid_name(){
+        let username = document.getElementById('uname').value;
+        if (username == "") {
+            document.getElementById('name_error').innerText = "*Please Enter Your name"
+        } else {
+            document.getElementById('name_error').innerText = ""
+        }
+    }
+
+    function valid_age(){ 
+        let userage = document.getElementById('age').value;
+        if (userage == "") {
+            document.getElementById('age_error').innerText = "*Please Enter Your Age"
+        } else {
+            document.getElementById('age_error').innerText = ""
+        }
+    }
+
+    function valid_email(){
+        let userid = document.getElementById('email').value;
+        if (userid == "") {
+            document.getElementById('email_error').innerText = "*Please Enter Your Email ID"
+        } else {
+            document.getElementById('email_error').innerText = ""
+        }
+    }
+
+    function valid_password(){
+        let userpass = document.getElementById('password').value;
+        if (userpass == "") {
+            document.getElementById('pass_error').innerText = "*Please Enter Your Password"
+        } else {
+            document.getElementById('pass_error').innerText = ""
+        }
+    }
+    
+    function submit(){
+        let username = document.getElementById('uname').value;
+        let userage = document.getElementById('age').value;
+        let userid = document.getElementById('email').value;
+        let userpass = document.getElementById('password').value;
+        if (username, userage, userid, userpass == "") {
+            document.getElementById('required').innerText = "Please fill (*) Required fields"            
+        } else {
+            document.getElementById('required').innerText = ""            
+        }
+    }
+    
+
+
+            // ONE FOR All input
+
+    // function validate(e, name_error){
+    //     if (e.value == "") {
+    //         document.getElementById('name_error').innerText = "*Mandatory"            
+    //     } else {
+    //         document.getElementById('name_error').innerText = ""
+    //     }
+    // }
+
+
+</script>

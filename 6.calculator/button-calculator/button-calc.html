@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="value 1" name="value1" id="value1" title="value1">
+            <input type="text" placeholder="value 2" name="value2" id="value2" title="value2">
+            <br><br>
+            <div class="dispresult">
+                <span>= &nbsp; <div id="result"></div></span>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <button id="add" onclick="add(this)">+</button>
+                </div>
+                <div class="col-25">
+                    <button id="minus" onclick="min(this)">-</button>
+                </div>
+                <div class="col-25">
+                    <button id="multiply" onclick="multi(this)">*</button>
+                </div>
+                <div class="col-25">
+                    <button id="divide" onclick="divide(this)">/</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-33">
+                    <button onclick="input(this)" value="1" id="1">1</button>
+                </div>
+                <div class="col-33">
+                    <button>2</button>
+                </div>
+                <div class="col-33">
+                    <button>3</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-33">
+                    <button>4</button>
+                </div>
+                <div class="col-33">
+                    <button>5</button>
+                </div>
+                <div class="col-33">
+                    <button>6</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-33">
+                    <button>7</button>
+                </div>
+                <div class="col-33">
+                    <button>8</button>
+                </div>
+                <div class="col-33">
+                    <button>9</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-33">
+                    <button>AC</button>
+                </div>
+                <div class="col-33">
+                    <button>0</button>
+                </div>
+                <div class="col-33">
+                    <button>.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    
+    function input(e) {
+        let b1 = 1
+        document.getElementById(value1).innerHTML = 1
+    }
+
+
+    function add(e) {
+        let a = document.getElementById("value1").value;
+        let b = document.getElementById("value2").value;
+        document.getElementById("result").innerHTML = parseInt(a) + parseInt(b);
+    }
+    function min(e) {
+        let a = document.getElementById("value1").value;
+        let b = document.getElementById("value2").value;
+        document.getElementById("result").innerHTML = (a - b);
+    }
+    function multi(e) {
+        let a = document.getElementById("value1").value;
+        let b = document.getElementById("value2").value;
+        document.getElementById("result").innerHTML = (a * b);
+    }
+    function divide(e) {
+        let a = document.getElementById("value1").value;
+        let b = document.getElementById("value2").value;
+        document.getElementById("result").innerHTML = (a / b);
+    }
+</script>
