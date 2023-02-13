@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .btn{
+            text-align: center;
+        }
+        button{
+            padding: 10px;
+        }
+        #ans {
+            width: 50%;
+            margin: 100px auto;
+            border: 2px dotted black;
+            height: 200px;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Execute functions with JavaScripts</h1>
+    <br><hr><br>
+    <div class="btn">
+        <button onclick="SI(this)">Simple Interest<br><br>= p * r * t / 100</button>
+        <button onclick="SR(this)">Square root<br><br>= Math.sqrt(n)</button>
+        <button onclick="AoC(this)">Area of Circle<br><br>= pi * r * r</button>
+        <button onclick="PoC(this)">Perimeter of Circle<br><br>= 2 * pi * r</button>
+        <button onclick="AoT(this)">Area of Triangle<br><br>= h * b / 2</button>
+        <button onclick="PoT(this)">Perimeter of Triangle<br><br>= first + second + third</button>
+    </div>
+    <h2></h2>
+    <div id="ans"><p>Your Answer is :<br><span id="answer"></span></p></div>
+</body>
+
+</html>
+
+
+<script>
+
+    function SI(a) {
+        let p = parseFloat(prompt("Enter Principle amount : "));
+        let r = parseFloat(prompt("Enter Rate of Interest : "));
+        let t = parseFloat(prompt("Enter Duraion in Years : "));
+        let Simple_Interest = p * r * t / 100;
+        document.getElementById('answer').innerText = (Simple_Interest)
+    }
+
+    function SR(a) {
+        let n = parseFloat(prompt("Enter Number to find Square root of it : "));
+        let Square_Root = Math.sqrt(n);
+        document.getElementById('answer').innerText = (Square_Root)
+    }
+
+    function AoC(a) {
+        let pi = 3.14;
+        let r = parseFloat(prompt("Enter Radius of a Circle : "));
+        let Area_of_c = pi * r * r;
+        document.getElementById('answer').innerText = (Area_of_c)
+    }
+
+    function PoC(a) {
+        let pi = 3.14;
+        let r = parseFloat(prompt("Enter Radius of a Circle : "));
+        let Perimeter_of_c = 2 * pi * r;
+        document.getElementById('answer').innerText = (Perimeter_of_c)
+    }
+
+    function AoT(a) {
+        let h = parseFloat(prompt("Enter Height of a Triangle : "));
+        let b = parseFloat(prompt("Enter Base of a Triangle : "));
+        let Area_of_t = h * b / 2;
+        document.getElementById('answer').innerText = (Area_of_t)
+    }
+
+    function PoT(a) {
+        let first = parseFloat(prompt("Enter First side of Triangle : "));
+        let second = parseFloat(prompt("Enter Second side of Triangle : "));
+        let third = parseFloat(prompt("Enter Third side of Triangle : "));
+        let Perimeter_of_t = first + second + third;
+        document.getElementById('answer').innerText = (Perimeter_of_t)
+    }
+</script>
