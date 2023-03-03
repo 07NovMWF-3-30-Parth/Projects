@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Function</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container{
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+        }
+        #input{
+            height: 100px;
+            padding: 50px 0;
+            font-size: 30px;
+        }
+        #result {
+            height: 100px;
+            border: 1px solid black;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Character Checking Function</h1>
+    <hr>
+    <div class="container">
+        <div id="input"></div>
+        <div id="result"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    let char = String(prompt("Enter the Character or Word : "))
+    if (char.toUpperCase() === char) {
+        document.getElementById('input').innerHTML = (char)
+        document.getElementById('result').innerHTML = "Its is a Uppercase Character or Word"
+        // console.log("Its is a Uppercase Character or Word");
+    } else if (char.toLowerCase() === char) {
+        document.getElementById('input').innerHTML = (char)
+        document.getElementById('result').innerHTML = "This is Lowercase Character or Word"
+        // console.log("This is Lowercase Character or Word");
+    } else {
+        document.getElementById('input').innerHTML = (char)
+        document.getElementById('result').innerHTML = "This is both Uppercase & Lowercase Word"
+        // console.log("This is both Uppercase & Lowercase Word");
+    } {
+
+    }
+
+
+</script>
