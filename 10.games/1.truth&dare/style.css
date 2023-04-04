@@ -1,0 +1,25 @@
+body{
+    background-image: url(images/background1.jpg);
+    background-size: cover;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+h1{
+    padding: 50px 0;
+    font-size: 70px !important;
+    color: white !important;
+}
+#truth{
+    color: rgb(125, 107, 241);
+}
+#dare{
+    color: rgb(226, 5, 226);
+}
+#display{
+    height: 300px;
+    font-size: 50px;
+}
+a{
+    display: inline-block;
+    padding: 20px 40px;
+}
