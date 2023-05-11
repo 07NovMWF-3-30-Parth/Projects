@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    // This is for main menu for bankers and customers
+    let roles = ["(1) Banker", "(2) Customer", "", "(0) Exit"]
+    const customer = [
+        { accNo: 001, name: "Ram", opBal: 1000 },
+        { accNo: 002, name: "Krishna", opBal: 2000 },
+        { accNo: 003, name: "Valmik", opBal: 3000 },
+        { accNo: 004, name: "Ravi", opBal: 4000 }
+    ]
+    let select
+
+
+    function mainMenu() {
+        let ans = 0
+        do {
+            console.clear()
+            console.log("=================================================")
+            console.log("   WELCOME TO JAVASCRIPT BANK MANAGEMENT SYSTEM")
+            console.log("=================================================")
+            roles.forEach((m) => console.log(m))
+            console.log("")
+            console.log("Select your Role : ")
+            ans = parseInt(prompt("Choose your Role : "))
+            operation(parseInt(ans))
+        } while (parseInt(ans) !== 0);
+    }
+
+    function operation(ans) {
+        switch (ans) {
+            case 1:
+                bankerService()
+                break;
+            case 2:
+                customerService()
+                break;
+            case 0:
+                exit()
+                break;
+        }
+    }
+
+    function bankerService() {
+        let bankMenu = ["(1) Add Customer", "(2) View Customer Name", "(3) Search Customer", "(4) View Customer's All Details", "(5) Total Amounts in Bank", "", "(0) TO GOING BACK"]
+        let input = 0
+        do {
+            console.clear()
+            console.log("=========================")
+            console.log(" Bankers Operations Menu")
+            console.log("=========================")
+            // console.log("")
+            bankMenu.forEach((m) => console.log(m))
+            input = parseInt(prompt("Choose your Bank Operation : "))
+            console.clear()
+            // console.log(input)
+            bankerMenu(input)
+        } while (input !== 0)
+    }
+
+    function bankerMenu(input) {
+        switch (input) {
+            case 1:
+                addCustomer()
+                break;
+            case 2:
+                viewCustomer()
+                break;
+            case 3:
+                searchCustomer()
+                break;
+            case 4:
+                viewAllCustomer()
+                break;
+            case 5:
+                totalAmt()
+                break;
+        }
+    }
+
+    function addCustomer() {
+        //console.clear()
+        const newCustomer = {}
+
+        console.log(`New Account Number :`)
+        newCustomer.accNo = parseInt(prompt("Add New Account Number : "))
+        console.log(`${newCustomer.accNo}`)
+        // console.log("")
+
+        console.log(`New Customer Name : `)
+        newCustomer.name = prompt("Add Customer Name : ")
+        console.log(`${newCustomer.name}`)
+        // console.log("")
+
+        console.log(`New Customer's Opening Balance : `)
+        newCustomer.opBal = parseInt(prompt("Enter Opening Balance : "))
+        console.log(`${newCustomer.opBal}`)
+
+        customer.push(newCustomer)
+
+        console.log("")
+        console.log("Customer added Successfully")
+        console.log("Do you want to add more Customers? y/n")
+        let addcus = prompt("Do you want to add more Customer? y/n")
+        if (addcus == "y") {
+            console.clear()
+            addCustomer()
+        } if (addcus == "n") {
+            bankerService()
+        }
+    }
+    function viewCustomer() {
+        //console.clear()
+        for (let i = 0; i < customer.length; i++) {
+            console.log(customer[i].name)
+        }
+
+        console.log("")
+        console.log("Press any key to go back to bank menu")
+        let addcus = prompt("Press any key to go back to bank menu")
+        if (addcus == "y") {
+            bankerService()
+        }
+    }
+    function searchCustomer() {
+        //console.clear()
+        console.log("Enter Account number to view Customer : ")
+        let find = parseInt(prompt("Enter Account number to view Customer : "))
+        console.clear();
+        // console.log(find)
+
+        for (let i = 0; i < customer.length; i++) {
+            if (customer[i].accNo === find) {
+                console.log(`Customer Account No : ${customer[i].accNo}`)
+                console.log(`Customer Name : ${customer[i].name}`)
+                console.log(`Customer's Bank Balance : ${customer[i].opBal}`)
+            }
+        }
+
+        // let searchCustomer = customer.filter(m => m.accNo === find)
+        // console.log(JSON.stringify(searchCustomer));
+
+        console.log("")
+        console.log("Press any key to go back to bank menu")
+        let addcus = prompt("Press any key to go back to bank menu")
+        if (addcus == "y") {
+            bankerService()
+        }
+    }
+    function viewAllCustomer() {
+        //console.clear()
+        for (let i = 0; i < customer.length; i++) {
+            console.log(customer[i])
+        }
+
+        console.log("")
+        console.log("Press any key to go back to bank menu")
+        let addcus = prompt("Press any key to go back to bank menu")
+        if (addcus == "y") {
+            bankerService()
+        }
+    }
+    function totalAmt() {
+        //console.clear()
+        let totalAmt = customer.reduce((total, m) => total + m.opBal, 0);
+        console.log(`Total amount available in Bank : ${totalAmt}`);
+
+        console.log("")
+        console.log("Press any key to go back to bank menu")
+        let addcus = prompt("Press any key to go back to bank menu")
+        if (addcus == "y") {
+            bankerService()
+        }
+    }
+
+    function activeCustomer() {
+        console.log("Please Enter your Account number to do your further operation : ")
+        select = parseInt(prompt("Please Enter your Account number to do your further operation : "))
+    }
+
+
+    function customerService() {
+        let customerMenu = ["(1) Withdraw Amount", "(2) Deposit Amount", "(3) View Balance", "", "(0) TO GOING BACK"]
+        let input
+        console.clear()
+        activeCustomer()
+        do {
+            console.clear()
+            console.log("==========================")
+            console.log(" Customer Operations Menu")
+            console.log("==========================")
+
+            console.clear()
+
+            for (let i = 0; i < customer.length; i++) {
+                if (customer[i].accNo === select) {
+                    console.log(`Customer Account No : ${customer[i].accNo}`)
+                    console.log(`Customer Name : ${customer[i].name}`)
+                }
+            }
+
+            console.log("")
+            customerMenu.forEach((m) => console.log(m))
+            input = parseInt(prompt("Choose your Customer Operation : "))
+            console.clear()
+            // console.log(input)
+            customerMenuFunction(input)
+        } while (input !== 0)
+    }
+
+    function customerMenuFunction(input) {
+        switch (input) {
+            case 1:
+                withdrawAmt()
+                break;
+            case 2:
+                depositAmt()
+                break;
+            case 3:
+                viewBal()
+                break;
+        }
+    }
+
+    function withdrawAmt() {
+
+        console.log("How much money you want to withdraw?")
+        let withdraw = parseInt(prompt("How much money you want to withdraw?"));
+        console.clear()
+        console.log(`How much money you want to withdraw : ${withdraw}`);
+
+        for (let i = 0; i < customer.length; i++) {
+            if (customer[i].accNo === select) {
+                console.log(`Available bank balance in account : ${customer[i].opBal}`)
+                if (customer[i].opBal >= withdraw) {
+                    let rem = customer[i].opBal - withdraw
+                    console.log(`Your remaining bank balance is ${customer[i].opBal} - ${withdraw} = ${rem}`)
+                    customer[i].opBal = rem
+                } else if (customer[i].opBal < withdraw) {
+                    console.log("You have Insufficient balance in account")
+                }
+            }
+        }
+
+        console.log("")
+        console.log("Press any key to go back to bank menu")
+        let back = prompt("Press any key to go back to bank menu")
+        if (back == "y") {
+            customerService()
+        }
+    }
+
+
+
+    function depositAmt() {
+        console.log("How much money you want to deposit?")
+        let deposit = parseInt(prompt("How much money you want to deposit?"));
+        console.clear()
+        console.log(`How much money you want to deposit : ${deposit}`);
+
+        for (let i = 0; i < customer.length; i++) {
+            if (customer[i].accNo === select) {
+                console.log(`Available bank balance in account : ${customer[i].opBal}`)
+                let rem = customer[i].opBal + deposit
+                console.log(`Your New bank balance is ${customer[i].opBal} + ${deposit} = ${rem}`)
+                customer[i].opBal = rem
+            }
+        }
+
+        console.log("")
+        console.log("Press any key to go back to bank menu")
+        let back = prompt("Press any key to go back to bank menu")
+        if (back == "y") {
+            customerService()
+        }
+    }
+
+
+
+
+    function viewBal() {
+        for (let i = 0; i < customer.length; i++) {
+            if (customer[i].accNo === select) {
+                console.log(`Customer Account No : ${customer[i].accNo}`)
+                console.log(`Customer Name : ${customer[i].name}`)
+                console.log(`Customer's Bank Balance : ${customer[i].opBal}`)
+            }
+        }
+
+        console.log("")
+        console.log("Press any key to go back to bank menu")
+        let back = prompt("Press any key to go back to bank menu")
+        if (back == "y") {
+            customerService()
+        }
+
+    }
+
+
+
+    function exit() {
+        console.clear()
+        console.log("=====================================")
+        console.log(" Thank You For Choosing Our Service.")
+        console.log(" Have a Good Day")
+        console.log("=====================================")
+    }
+    mainMenu()
+</script>

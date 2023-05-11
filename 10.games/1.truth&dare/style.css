@@ -1,25 +1,27 @@
 body{
-    background-image: url(images/background1.jpg);
-    background-size: cover;
-    background-clip: content-box;
-    background-repeat: no-repeat;
+    background-color: lightgrey !important;
+    background: url(images/background.jpg)center center/cover;
 }
 h1{
     padding: 50px 0;
-    font-size: 70px !important;
-    color: white !important;
+    font-size: 60px !important;
+    color: brown !important;
 }
-#truth{
+#truth, #dare{
     color: rgb(125, 107, 241);
 }
-#dare{
-    color: rgb(226, 5, 226);
-}
 #display{
-    height: 300px;
-    font-size: 50px;
+    font-size: 40px;
+    padding: 50px 10px !important;
 }
-a{
-    display: inline-block;
+button{
+    color: white !important;
+    background-color: royalblue;
+    font-size: 30px !important;
+    font-weight: bold;
     padding: 20px 40px;
+}
+button:hover{
+    background-color: purple;
+    color: white;
 }

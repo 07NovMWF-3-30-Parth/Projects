@@ -33,7 +33,6 @@ let truth = [
     "What's the cheapest gift you've ever gotten for someone else?",
     "What app do you waste the most time on?",
     "What's the weirdest thing you've done on a plane?",
-    "Have you ever been nude in public?",
     "How many gossip blogs do you read a day?",
     "What is the youngest age partner you'd date?",
     "Have you ever picked your nose in public?",
@@ -42,15 +41,59 @@ let truth = [
     "What's your most embarrassing late-night purchase?",
     "What's the longest you've gone without showering?",
     "Have you ever used a fake ID?",
-]
+];
+
+let dare = [
+    "Show the most embarrassing photo on your phone",
+    "Show the last five people you texted and what the messages said",
+    "Let the rest of the group DM someone from your Instagram account",
+    "Eat a raw piece of garlic",
+    "Do 100 squats",
+    "Keep three ice cubes in your mouth until they melt",
+    "Say something dirty to the person on your left",
+    "Give a foot massage to the person on your right",
+    "Put 10 different available liquids into a cup and drink it",
+    "Yell out the first word that comes to your mind",
+    "Like the first 15 posts on your Facebook newsfeed",
+    "Eat a spoonful of mustard",
+    "Keep your eyes closed until it's your go again",
+    "Send a text to the last person in your phonebook",
+    "Empty out your wallet/purse and show everyone what's inside",
+    "Pretend to be the person to your right for 10 minutes",
+    "Eat a snack without using your hands",
+    "Say two honest things about everyone else in the group",
+    "Try and make the group laugh as quickly as possible",
+    "Tell everyone an embarrassing story about yourself",
+    "Try to lick your elbow",
+    "Post the oldest selfie on your phone on Instagram Stories",
+    "Tell the saddest story you know",
+    "Howl like a wolf for two minutes",
+    "Dance without music for two minutes",
+    "Let someone else tickle you and try not to laugh",
+    "Put as many snacks into your mouth at once as you can"
+];
 // console.log(Math.random(x));
 // console.log(Math.floor(x));
 // console.log(x.length);
 
-
-let res = Math.floor(Math.random() * truth.length);
+// let res = Math.floor(Math.random() * truth.length);
 // console.log(res);
-let random = truth[res];
+// let random = truth[res];
 // console.log(x[res])
 
-document.getElementById("display").innerText = random
+// document.getElementById("display").innerText = random
+
+
+function dTruth() {
+    let res = Math.floor(Math.random() * truth.length);
+    console.log(res)
+    let random = truth[res];
+    console.log(random)
+    document.getElementById("display").innerText = random
+}
+
+function dDare() {
+    let res = Math.floor(Math.random() * dare.length);
+    let random = dare[res];
+    document.getElementById("display").innerText = random
+}
