@@ -1,0 +1,15 @@
+.rain {
+    background-image: url(images/rain.gif);
+}
+
+.clearSky {
+    background: url(images/clearSky.jpg)center center/cover;
+}
+
+.fewClouds {
+    background: url(images/fewClouds.avif)center center/cover;
+}
+
+.haze {
+    background: url(images/haze.gif)center center/cover;
+}
