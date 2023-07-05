@@ -1,0 +1,37 @@
+.login .row {
+    padding-top: 120px !important;
+
+}
+
+.login form {
+    background-color: aliceblue;
+    padding: 40px;
+    border-radius: 5%;
+    /* width: 65%; */
+}
+
+.form-text,
+a {
+    background-color: aliceblue !important;
+}
+
+.title {
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.title h1 {
+    font-size: 50px !important;
+}
+
+button:hover {
+    background-color: darkcyan !important;
+}
+
+.signup input {
+    margin: 10px 0;
+}
+
+.signup p {
+    font-size: 12px;
+}
