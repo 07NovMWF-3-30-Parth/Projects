@@ -1,6 +1,7 @@
 import './logger.css'
 import { useState } from 'react';
-import Login from '../login';
+import { Link } from 'react-router-dom';
+
 
 function Logger() {
     const [greet, setGreet] = useState("")
@@ -13,13 +14,9 @@ function Logger() {
         setGreet("");
     }
 
-    function logout() {
-        <Login />
-    }
-
     return (
         <div className="container my-5 position-relative">
-            <button onClick={logout} className='position-absolute top-0 end-0 btn btn-primary'>Logout</button>
+            <Link to="/" className='position-absolute top-0 end-0 btn btn-primary text-black'>Sign Out</Link>
             <h1>Hello, </h1>
             <h3 className="pb-3">Welcome to Greeter ! ! !</h3>
             <hr />

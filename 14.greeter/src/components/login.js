@@ -1,4 +1,4 @@
-import Logger from './components/Logger';
+import { Link } from "react-router-dom"
 import './login.css'
 import { useState } from 'react';
 
@@ -9,13 +9,13 @@ function Login() {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
-    function log_in() {
-        if (email.indexOf('@') >= 0 && pass.length >= 8) {
-            <Logger />
-        } else {
-            alert("Email should include @ and password length must be 8 character")
-        }
-    }
+    // function log_in() {
+    //     if (email.indexOf('@') >= 0 && pass.length >= 8) {
+
+    //     } else {
+    //         alert("Email should include @ and password length must be 8 character")
+    //     }
+    // }
 
     return (
         <>
@@ -28,35 +28,36 @@ function Login() {
                     <div className='col-xxl-4 col-xl-5 col-lg-6 col-md-7 text-center'>
                         <form className='shadow'>
                             <div>
-                                <input type='email' id='email' className='form-control' onChange={(e) => setEmail(e.target.value)} placeholder='Enter your Email here' />
+                                <input type='email' id='log_email' className='form-control' onChange={(e) => setEmail(e.target.value)} placeholder='Enter your Email here' />
                                 <div className='text-start form-text mb-4'>We'll never share your email with anyone else.</div>
                             </div>
                             <div>
-                                <input type='password' id='password' className='form-control' onChange={(e) => setPass(e.target.value)} placeholder='Enter your Password here' />
+                                <input type='password' id='log_password' className='form-control' onChange={(e) => setPass(e.target.value)} placeholder='Enter your Password here' />
                             </div>
                             <div>
-                                <button type="button" className="btn text-white mt-4 mb-2 w-75 bg-primary" onClick={log_in}>Login</button>
+                                <Link to="Login" className="btn text-white mt-4 mb-2 w-75 bg-primary">Login</Link>
+                                {/* <button type="button" className="btn text-white mt-4 mb-2 w-75 bg-primary" onClick={log_in}>Login</button> */}
                             </div>
                             <div>
                                 <a href='#' className='link'>Forgotten password?</a>
                             </div>
                             <hr />
                             <div>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Create New Account</button>
+                                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Create New Account</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div >
-            <div class="modal fade shadow-lg" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" a ria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content bg-info-subtle">
+            <div className="modal fade shadow-lg" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" a ria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content bg-info-subtle">
 
-                        <div class="modal-header">
+                        <div className="modal-header">
                             <h2>Sign Up</h2>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <form className='signup'>
                                 <div className='row'>
                                     <div className='col'><input type='text' id='firstName' onChange={(e) => setFName(e.target.value)} className='form-control' placeholder='First name'></input></div>
@@ -64,10 +65,10 @@ function Login() {
                                     </div>
                                 </div>
                                 <div>
-                                    <input type='email' id='email' onChange={(e) => setEmail(e.target.value)} className='form-control' placeholder='Enter New Email here' />
+                                    <input type='email' id='sign_email' onChange={(e) => setEmail(e.target.value)} className='form-control' placeholder='Enter New Email here' />
                                 </div>
                                 <div>
-                                    <input type='password' id='password' onChange={(e) => setPass(e.target.value)} className='form-control'
+                                    <input type='password' id='sign_password' onChange={(e) => setPass(e.target.value)} className='form-control'
                                         placeholder='New password'></input>
                                 </div>
                                 <div className='row'>
@@ -89,9 +90,9 @@ function Login() {
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Sign Up</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary">Sign Up</button>
                         </div>
                     </div>
                 </div>
