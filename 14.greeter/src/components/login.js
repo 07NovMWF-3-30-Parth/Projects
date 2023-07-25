@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import './login.css'
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
@@ -8,14 +9,15 @@ function Login() {
     const [lName, setLName] = useState('');
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    const navigate = useNavigate()
 
-    // function log_in() {
-    //     if (email.indexOf('@') >= 0 && pass.length >= 8) {
-
-    //     } else {
-    //         alert("Email should include @ and password length must be 8 character")
-    //     }
-    // }
+    function log_in() {
+        if (email.indexOf('@') >= 0 && pass.length >= 8) {
+            navigate('login')
+        } else {
+            alert("Email should include @ and password length must be 8 character")
+        }
+    }
 
     return (
         <>
@@ -35,8 +37,8 @@ function Login() {
                                 <input type='password' id='log_password' className='form-control' onChange={(e) => setPass(e.target.value)} placeholder='Enter your Password here' />
                             </div>
                             <div>
-                                <Link to="Login" className="btn text-white mt-4 mb-2 w-75 bg-primary">Login</Link>
-                                {/* <button type="button" className="btn text-white mt-4 mb-2 w-75 bg-primary" onClick={log_in}>Login</button> */}
+                                {/* <Link to="Login" className="btn text-white mt-4 mb-2 w-75 bg-primary">Login</Link> */}
+                                <button type="button" className="btn text-white mt-4 mb-2 w-75 bg-primary" onClick={log_in}>Login</button>
                             </div>
                             <div>
                                 <a href='#' className='link'>Forgotten password?</a>
