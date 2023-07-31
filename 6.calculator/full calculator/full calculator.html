@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: radial-gradient(circle, #e78bf0, #c59eff, #a4adff, #8ab9ff, #7ec2f9, #73c0fa, #66befa, #57bcfb, #49adff, #609bff, #8a82ff, #b75ffb);
+        }
+        .container{
+            text-align: center;
+        }
+        .calculator{
+            background-color: seashell;
+            width: 30%;
+            margin: 0px auto;
+            padding-bottom: 10px;
+            border: 5px outset purple;
+            border-radius: 50px;
+        }
+        #display{
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            background-color: black;
+            color: white;
+            padding: 10px 10px;
+            height: 130px;
+            border: 5px inset silver;
+            font-size: 50px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+        button{
+            font-weight: bolder;
+            font-size: 20px;
+            width: 20%;
+            padding: 25px 0px;
+            margin: 5px;
+            border-radius: 50px;
+        }
+        #AC{
+            background-color: sandybrown;
+        }
+        .math{
+            background-color: skyblue;
+        }
+        #ans{
+            background-color: slateblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div id="display" contenteditable="true"></div>
+            <br>
+            <button id="AC" onclick="AllClear()">AC</button>
+            <button onclick="back()">&lt;=</button>
+            <button class="math" onclick="PI()">pi</button>
+            <button class="math" onclick="percentage()">%</button>
+            <br>
+            <button onclick="one()">1</button>
+            <button onclick="two()">2</button>
+            <button onclick="three()">3</button>
+            <button class="math" onclick="plus()">+</button>
+            <br>
+            <button onclick="four()">4</button>
+            <button onclick="five()">5</button>
+            <button onclick="six()">6</button>
+            <button class="math" onclick="minus()">-</button>
+            <br>
+            <button onclick="seven()">7</button>
+            <button onclick="eight()">8</button>
+            <button onclick="nine()">9</button>
+            <button class="math" onclick="multiply()">x</button>
+            <br>
+            <button onclick="dot()">.</button>
+            <button onclick="zero()">0</button>
+            <button id="ans" onclick="ans()">=</button>
+            <button class="math" onclick="divide()">/</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    function one(){
+        let one = 1;
+        document.getElementById("display").innerHTML += one;
+    }
+    function two(){
+        let two = 2;
+        document.getElementById("display").innerHTML += two;
+    }
+    function three(){
+        let three = 3;
+        document.getElementById("display").innerHTML += three;
+    }
+    function four(){
+        let four = 4;
+        document.getElementById("display").innerHTML += four;
+    }
+    function five(){
+        let five = 5;
+        document.getElementById("display").innerHTML += five;
+    }
+    function six(){
+        let six = 6;
+        document.getElementById("display").innerHTML += six;
+    }
+    function seven(){
+        let seven = 7;
+        document.getElementById("display").innerHTML += seven;
+    }
+    function eight(){
+        let eight = 8;
+        document.getElementById("display").innerHTML += eight;
+    }
+    function nine(){
+        let nine = 9;
+        document.getElementById("display").innerHTML += nine;
+    }
+    function zero(){
+        let zero = 0;
+        document.getElementById("display").innerHTML += zero;
+    }
+    function plus(){
+        let plus = '+';
+        let calc = document.getElementById("display").innerText
+        let last = calc.charAt(calc.length-1)
+        if(['+', '-', '*', '/', '%'].indexOf(last) > -1){
+            let calcArr = calc.split('')
+            calcArr.splice(calc.length - 1, 1, '+')
+            calc = calcArr.join('')
+        } else {
+            calc += plus;
+        }
+        document.getElementById("display").innerHTML = calc
+    }
+    function minus(){
+        let minus = '-';
+        let calc = document.getElementById("display").innerText
+        let last = calc.charAt(calc.length-1)
+        if(['+', '-', '*', '/', '%'].indexOf(last) > -1){
+            let calcArr = calc.split('')
+            calcArr.splice(calc.length -1, 1, '-')
+            calc = calcArr.join('')
+        } else {
+            calc += minus;
+        }
+        document.getElementById("display").innerHTML = calc;
+    }
+    function multiply(){
+        let multiply = '*';
+        let calc = document.getElementById("display").innerText
+        let last = calc.charAt(calc.length-1)
+        if(['+', '-', '*', '/', '%'].indexOf(last) > -1){
+            let calcArr = calc.split('')
+            calcArr.splice(calc.length -1, 1, '*')
+            calc = calcArr.join('')
+        } else{
+            calc += multiply
+        }
+        document.getElementById("display").innerHTML = calc;
+    }
+    function divide(){
+        let divide = '/';
+        let calc = document.getElementById("display").innerText
+        let last = calc.charAt(calc.length-1)
+        if(['+', '-', '*', '/', '%'].indexOf(last) > -1){
+            let calcArr = calc.split('')
+            calcArr.splice(calc.length -1, 1, '/')
+            calc = calcArr.join('')
+        } else {
+            calc += divide
+        }
+        document.getElementById("display").innerHTML = calc;
+    }
+    function AllClear(){
+        let ac = ""
+        document.getElementById("display").innerHTML = ac;
+    }
+    function PI() {
+        let pi = String(Math.PI).slice(0, 7);
+        document.getElementById("display").innerHTML += pi;
+    }
+    function ans(){
+        let calc = document.getElementById("display").innerText
+        let ans = eval(calc)
+        document.getElementById("display").innerHTML = ans;
+    }
+    function dot(){
+        let dot = '.';
+        document.getElementById("display").innerHTML += dot;
+    }
+    function percentage(){
+        let percentage = '%';
+        let calc = document.getElementById('display').innerText
+        let last = calc.charAt(calc.length-1)
+        if(['+', '-', '*', '/', '%'].indexOf(last) > -1){
+            let calcArr = calc.split('')
+            calcArr.splice(calc.length-1, 1, '%')
+            calc = calcArr.join('')
+        } else {
+            calc += percentage
+        }
+        document.getElementById("display").innerHTML = calc;
+    }
+    function back(){
+        let calc = document.getElementById("display").innerHTML
+        let back = calc.substring(0, calc.length-1)
+        document.getElementById("display").innerHTML = back;
+    }
+
+
+    
+   
+</script>
